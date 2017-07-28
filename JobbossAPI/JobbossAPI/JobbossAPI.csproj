@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +51,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API.cs" />
+    <Compile Include="Model\Attendance.cs" />
+    <Compile Include="Model\Breaks.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Job.cs" />
+    <Compile Include="Model\JobbossDatabase.cs" />
+    <Compile Include="Model\Job_Operation.cs" />
+    <Compile Include="Model\Job_Operation_Time.cs" />
+    <Compile Include="Model\Material_Req.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Model\Shift.cs" />
+    <Compile Include="Model\Shift_Day.cs" />
+    <Compile Include="Model\Transaction_Data.cs" />
+    <Compile Include="Model\Transaction_Detail.cs" />
+    <Compile Include="Model\User_Code.cs" />
+    <Compile Include="Model\Work_Center.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
